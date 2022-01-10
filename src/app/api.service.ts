@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Todo } from './todo.model';
+import { Todo } from './todos-store';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class ApiService {
     private http: HttpClient
   ) { }
 
-  addTask(title: string, description?: string): Observable<Todo> {
+  addTodo(title: string, description?: string): Observable<Todo> {
     return this.http.post<Todo>(this.todosUrl, {title, description});
   }
 

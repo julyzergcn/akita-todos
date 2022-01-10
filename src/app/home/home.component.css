@@ -1,0 +1,11 @@
+mat-card {
+    width: 30%;
+    margin: 2em;
+}
+mat-card button {
+    float: right;
+}
+
+.add-todo-button {
+    margin: 1em;
+}
